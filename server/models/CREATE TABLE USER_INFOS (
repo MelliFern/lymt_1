@@ -1,0 +1,36 @@
+Drop table USER_INFOS;
+drop table ORGANIZATION_INFOS;
+
+CREATE TABLE USER_INFOS (
+    id      integer unique,
+    user_name    varchar(100) ,
+    user_email    varchar(120) unique , 
+    user_password varchar(100), 
+    is_org_flag boolean,
+    "updatedAt" date, 
+    "createdAt" date
+);
+
+
+ CREATE TABLE ORGANIZATION_INFOS (
+    id      integer unique,
+    user_id    varchar(100) ,
+    org_name varchar(120), 
+    "updatedAt" date, 
+    "createdAt" date
+);
+
+  
+  
+
+  user_password: {
+    type     	: Sequelize.STRING,
+    allowNull	: false,
+    set      	: function(val) {
+    			      this.setDataValue('user_password', val);
+    			    }
+  },
+
+  is_org_flag	: {
+    type     	    : Sequelize.BOOLEAN,
+    allowNull	    :

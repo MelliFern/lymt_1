@@ -1,0 +1,35 @@
+<section data-ng-controller="newCaseController" class="row">
+  <div class="col-md-2">
+    <h3>New Case</h3>
+
+  <form name="newCaseForm">
+    <div class="form-group">
+      <label class="control-label" for="fname">First Name</label>
+      <input class= "form-control" id="fname" type="text" required data-ng-model="newCase.first_name">
+    </div>
+     <div class="form-group">
+      <label class="control-label" for="lname">Last Name</label>
+      <input class= "form-control" id="lname" type="text" required data-ng-model="newCase.last_name">
+    </div>
+
+
+    <div class="form-group">
+      <label class="control-label" for="age">Age</label>
+      <input class= "form-control" id="age" type="text" required data-ng-model="newCase.age"> 
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="details">Education details</label>
+      <textarea rows="5" cols="80" class= "form-control" id="details" type="text" required data-ng-model="newUser.details"> </textarea> 
+    </div>
+    <div class="form-group">
+      <input type="file" name="Upload Documents" id="myFile">  
+    </div>
+      <div class="form-group">
+      <button class="btn btn-default">New Case</button>  
+    </div>
+    
+  </form>
+  </div>
+  
+</section>
